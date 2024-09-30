@@ -28,7 +28,7 @@ export default async function Page(props: PageProps) {
         <title>{content?.data.title}</title>
       </Head>
       {/* Render the Builder page */}
-      <RenderBuilderContent content={content} />
+      <RenderBuilderContent content={content} model={"page"} />
     </>
   );
 }
