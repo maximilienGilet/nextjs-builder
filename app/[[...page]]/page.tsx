@@ -19,6 +19,7 @@ export default async function Page(props: PageProps) {
         urlPath: "/" + (props?.params?.page?.join("/") || ""),
       },
       prerender: false,
+      fields: "data",
     })
     .toPromise();
 
@@ -26,6 +27,7 @@ export default async function Page(props: PageProps) {
     <>
       <Head>
         <title>{content?.data.title}</title>
+        <meta name="description" content={content?.data.description} />
       </Head>
       {/* Render the Builder page */}
       <RenderBuilderContent content={content} model={"page"} />
