@@ -20,6 +20,8 @@ export default async function Page(props: PageProps) {
       },
       prerender: false,
       fields: "data",
+      cacheSeconds: 10,
+      cachebust: true,
     })
     .toPromise();
 
